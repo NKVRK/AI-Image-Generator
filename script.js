@@ -8,9 +8,6 @@ const ratioSelect = document.getElementById("ratio-select");
 const gridGallery = document.querySelector(".gallery-grid");
 const generateBtn = document.querySelector(".generate-btn");
 
-// Hugging face API Key
-const API_KEY = "[REDACTED]";
-
 const examplePrompts = [
     "A magic forest glowing plants and fairy homes among gaint mushrooms",
     "An old steampunk airship floating through golden clouds at sunset",
@@ -86,7 +83,7 @@ const generateImages = async (selectedModel,imageCount,aspectRatio,promptText) =
         try{
             const response = await fetch(MODEL_URL,{
                 headers:{
-                    Authorization: `Bearer ${API_KEY}`,
+                    Authorization: `Bearer your api key`,
                     "Content-Type": "application/json",
                     "x-use-cache":"false",
                 },
