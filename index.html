@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>AI Image Generator</title>
-    <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
     <div class="container">
@@ -26,6 +25,14 @@
 
         <div class="main-content">
             <form action="#" class="prompt-form">
+                <!-- API Key Input -->
+                <div class="api-key-container">
+                    <input type="password" class="api-key-input" placeholder="Enter your OpenAI API key" required/>
+                    <button type="button" class="api-key-toggle">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+
                 <!-- Prompt Container -->
                 <div class="prompt-container">
                     <textarea class="prompt-input" placeholder="Describe your imagination in detail..." required autofocus></textarea>
@@ -39,11 +46,9 @@
                     <div class="select-wrapper">
                         <select class="custom-select" id="model-select" required>
                             <option value="" selected disabled>Select Model</option>
-                            <option value="black-forest-labs/FLUX.1-dev">FLUX.1-dev</option>
-                            <option value="black-forest-labs/FLUX.1-schnell">FLUX.1-schnell</option>
-                            <option value="stabilityai/stable-diffusion-xl-base-1.0">Stable Diffusion XL</option>
-                            <option value="runwayml/stable-diffusion-v1-5">Stable Diffusion v1.5</option>
-                            <option value="prompthero/openjourney">Openjourney</option>
+                            <option value="dall-e-3">DALL-E 3 (Highest Quality)</option>
+                            <option value="dall-e-2">DALL-E 2 (Standard)</option>
+                            <option value="dall-e-2-hd">DALL-E 2 HD (Enhanced)</option>
                         </select>
                     </div>
 
@@ -62,7 +67,7 @@
                             <option value="" selected disabled>Aspect Ratio</option>
                             <option value="1/1">Square (1:1)</option>
                             <option value="16/9">Landscape (16:9)</option>
-                            <option value="9/16">Portrait</option>
+                            <option value="9/16">Portrait (9:16)</option>
                         </select>
                     </div>
 
@@ -81,4 +86,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
